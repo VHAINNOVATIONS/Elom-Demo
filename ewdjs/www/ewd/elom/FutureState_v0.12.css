@@ -1,0 +1,144 @@
+body {
+	margin: 0px; padding: 0px;
+}
+#rule2 {
+	left: 80px; top: 332px; width: 148px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 1;
+}
+#rule3 {
+	left: 241px; top: 327px; width: 120px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 2;
+}
+#rule4 {
+	left: 400px; top: 332px; width: 93px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 3;
+}
+#rule7 {
+	left: 80px; top: 43px; width: 622px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 4;
+}
+#rule8 {
+	left: 80px; top: 50px; width: 150px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 5;
+}
+#rule9 {
+	left: 80px; top: 307px; width: 150px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 6;
+}
+#rule10 {
+	left: 241px; top: 307px; width: 200px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 7;
+}
+#rule11 {
+	left: 397px; top: 307px; width: 100px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 8;
+}
+#rule12 {
+	left: 497px; top: 307px; width: 73px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 9;
+}
+#rule13 {
+	left: 80px; top: 70px; width: 400px; height: 129px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 10;
+}
+input#filterLabNames{
+	width:350px; 
+}
+input#docName{
+	width:350px;
+}
+select.test,option { width:350px; };
+
+select#provList{
+	width:350px;
+}
+
+#rule16 {
+	left: 80px; top: 70px; width: 400px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: -11;
+}
+#rule17 {
+	border-style: solid; border-width: 1px; left: 80px; top: 360px; width: 500px; height: 400px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 12; background-color: white;
+}
+#rule18 {
+	left: 470px; top: 50px; width: 321px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 13;
+}
+#rule21 {
+	left: 470px; top: 100px; width: 100px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 14;
+}
+#rule22 {
+	left: 501px; top: 141px; width: 100px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 15;
+}
+#rule23 {
+	left: 509px; top: 182px; width: 100px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 16;
+}
+#rule24 {
+	left: 581px; top: 100px; width: 61px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 17;
+}
+#rule25 {
+	left: 581px; top: 141px; width: 63px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 18;
+}
+#rule26 {
+	left: 581px; top: 182px; width: 68px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 19;
+}
+#rule27 {
+	border-style: solid; border-width: 1px; left: 700px; top: 230px; width: 185px; height: 105px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 20;
+}
+#rule28 {
+	left: 726px; top: 237px; width: 200px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 21;
+}
+#rule29 {
+	left: 720px; top: 273px; width: 200px; height: 23px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 22;
+}
+#rule32 {
+	left: 595px; top: 362px; width: 300px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; color:blue; font-size:14px; text-decoration: underline; position: absolute; z-index: 23;
+}
+#rule33 {
+	left: 595px; top: 555px; width: 300px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; color:blue; font-size:14px; text-decoration: underline; position: absolute; z-index: 24;
+}
+#rule34 {
+	left: 850px; top: 740px; width: 47px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 25;
+}
+#rule35 {
+	left: 597px; top: 740px; width: 102px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 26;
+}
+#rule36 {
+	left: 597px; top: 580px; width: 350px; height: 58px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 27;
+}
+#rule37 {
+	left: 597px; top: 415px; width: 312px; height: 99px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 28;
+}
+#rule38 {
+	left: 597px; top: 391px; width: 409px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 29;
+}
+#rule40 {
+	left: 496px; top: 327px; width: 79px; height: 23px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 30;
+}
+#rule41 {
+	left: 65px; width:950px; height: 800px; border-style: solid; border-width: 2px; position: absolute; z-index: -1; background-color: #ece9d8;
+}
+
+#rule42 {
+	width: 945px; border-bottom: 1px solid; position: absolute; z-index: -1; padding: 2px; background-color: #E0F8F7;
+}
+
+#rule43 {
+	left: 750px; top: 710px; width: 200px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 26;
+}
+
+#rule44 {
+	left: 597px; top: 710px; width: 200px; height: 24px; font-family: Comic Sans MS,Verdana,Helvetica; font-size: 13px; position: absolute; z-index: 26;
+}
+
+#rule45 {
+	left: 80px; top: 30px; width: 600px; height: 21px; color: rgb(0, 0, 0); font-family: Comic Sans MS,Verdana,Helvetica; font-size: 11px; position: absolute; z-index: 5;
+}
+
+.breadCrumb {
+	text-decoration: underline;
+}
+.btn34 {
+	border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); padding: 4px 14px; border-radius: 4px; transition:0.1s linear; border-image: none; width: 47px; color: rgb(51, 51, 51); line-height: 12px; font-size: 13px; display: inline-block; cursor: pointer; box-shadow: inset 0px 1px 0px rgba(255,255,255,0.2), 0px 1px 2px rgba(0,0,0,0.05); text-shadow: 0px 1px 1px rgba(255,255,255,0.75); background-repeat: no-repeat; background-color: rgb(255, 255, 255); -webkit-border-radius: 4px; -moz-border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -webkit-transition: 0.1s linear all; -moz-transition: 0.1s linear all;
+}
+.btn34:hover {
+	background-position: 0px -15px; color: rgb(51, 51, 51); text-decoration: none;
+}
+.btn35 {
+	border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); padding: 4px 14px; border-radius: 4px; transition:0.1s linear; border-image: none; width: 102px; color: rgb(51, 51, 51); line-height: 12px; font-size: 13px; display: inline-block; cursor: pointer; box-shadow: inset 0px 1px 0px rgba(255,255,255,0.2), 0px 1px 2px rgba(0,0,0,0.05); text-shadow: 0px 1px 1px rgba(255,255,255,0.75); background-repeat: no-repeat; background-color: rgb(255, 255, 255); -webkit-border-radius: 4px; -moz-border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -webkit-transition: 0.1s linear all; -moz-transition: 0.1s linear all;
+}
+.btn35:hover {
+	background-position: 0px -15px; color: rgb(51, 51, 51); text-decoration: none;
+}
+
+.blueUnder {
+	color:blue; font-size:15;
+}
