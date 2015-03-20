@@ -7,19 +7,11 @@ function prepareEventHandlers() {
                 testList.onchange =  function() {
                                 var value = testList.value;
   							var testIndex = testList.selectedIndex;
-              //                 selectedTest.value = value;
-							//	if(testIndex == 0)
-							//		value = "HEPARIN INDUCE HIT Antibody";
-							//	if (testIndex == 3)
-							//		value = "HEPARIN INDUCED PLATELET";
                 title.innerHTML = value;
                 title.style.textDecoration= "underline";
 								prepareEventHandlersFour(testIndex);
 								setDefaultSelections(testIndex);
 								setCrumbs(2);
-  //                             sendMessage('noFilter', 'urgencyQuery');
- //                              sendMessage('noFilter', 'collectSampleQuery');
- //                              sendMessage('noFilter', 'specimenQuery');
                 getSelectedLab();
 
                 }
