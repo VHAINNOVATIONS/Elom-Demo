@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+      <title>EWD.js RNF</title>
+      <!--[if (IE 6)|(IE 7)|(IE 8)]>
+      <script type="text/javascript"
+      src="//ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+      <![endif]-->
+    </head>
+    <body>
+      <h2>EWD.js RNF Application</h2>
+<!--
+      <input type="button" value="Get Labs" onClick="sendMessage()" />
+-->
+      <input type="text" name="filterLabNames" onkeyup="sendMessage(this.value, 'labQuery')"/> 
+      <BR>
+                 <select id="testList" type="combobox" size="11" class="test"name="selectedTest">
+               <option>HIT AB &lt;HEPARIN INDUCE HIT Antibody&gt;</option>
+            </select>
+      <BR>
+      <input type="text" name="filterProviders" onkeyup="sendMessage(this.value, 'providerQuery')"/>
+      <BR>
+      <div id="rule23">Urgency </div>
+      <select type="combobox" name="urgency" id="urgency" onfocus="sendMessage('noFilter', 'urgencyQuery')"> </select>  
+      <BR>                  
+      <input type="text" name="filterPatient" onkeyup="sendMessage(this.value, 'patientQuery')"/>
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+      <script type="text/javascript" src="//code.jquery.com/jquery-latest.js"></script>
+
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/ewdjs/EWD.js"></script>
+      <!--script src="/ewdjs/ewdBoostrap_lprior.js"></script-->
+      <script src="app.js"></script>
+    </body>
+</html>
