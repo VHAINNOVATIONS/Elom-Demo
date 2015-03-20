@@ -1,30 +1,193 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-  <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-      <title>EWD.js RNF</title>
-      <!--[if (IE 6)|(IE 7)|(IE 8)]>
-      <script type="text/javascript"
-      src="//ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
-      <![endif]-->
-    </head>
-    <body>
-      <h2>EWD.js RNF Application</h2>
-<!--
-      <input type="button" value="Get Labs" onClick="sendMessage()" />
--->
-      <input type="text" name="filterLabNames" onkeyup="sendMessage(this.value, 'labQuery')"/> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML>
+   <HEAD>
+      <META content="IE=11.0000" http-equiv="X-UA-Compatible">
+      <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <LINK href="FutureState_v0.12.css" rel="stylesheet" type="text/css" charset="utf-8">
+      <SCRIPT SRC="scriptApp.js"></SCRIPT>
+      <TITLE>Future State v0.12 Mockup</TITLE>
+      <META name="GENERATOR" content="MSHTML 11.00.9600.17344">
+   </HEAD>
+   <BODY>
+
+      <FORM action="http://localhost:8888/elom" method="POST" >
+         <div id="logInDiv" style="display:block;">
+            <p><b>Please log into the Enhanced Lab Order Menu Screen</b></p>
+             <p>user id</p>
+            <input type="text"   />
+             <p>password</p>
+            <input type="password"  />
+            <input type="button" value="Log In" onClick="logIn()" />
+         </div>
+         <div id="contentDiv" style="display:none;">
+         <DIV id="rule2">
+            <SELECT type="combobox"name="collectionType"id="collectionType">
+               <OPTION label="Send Patient to Lab">Send Patient to Lab</OPTION>
+               <OPTION label="Samples Sent to Lab">Samples Sent to Lab</OPTION>
+               <OPTION label="Offsite Sample">Offsite Sample</OPTION>
+            </SELECT>
+         </DIV>
+         <DIV id="rule3">
+            <input type="date" name="collectionDate"id="collectionDate">
+            <!--
+               <SELECT  style="width:128px" type="combobox">
+               <OPTION label="TODAY">TODAY</OPTION>
+               <OPTION label="PAST">PAST</OPTION>
+               <OPTION label="FUTURE">FUTURE</OPTION>
+               </SELECT>
+               -->
+         </DIV>
+         <DIV id="rule4">
+            <SELECT type="combobox"name="howOften"id="howOften">
+               <OPTION label="ONE TIME">ONE TIME</OPTION>
+               <OPTION label="BIWEEKLY">BIWEEKLY</OPTION>
+               <OPTION label="ANNUALLY">ANNUALLY</OPTION>
+            </SELECT>
+         </DIV>
+         <DIV id="rule8">Available Lab Tests </DIV>
+         <DIV id="rule9">Collection Type </DIV>
+         <DIV id="rule10">Collection Date/Time </DIV>
+         <DIV id="rule11">How Often? </DIV>
+         <DIV id="rule12">How Long? </DIV>
+         <DIV id="rule13">
+<!-- new -->
+      <input type="text" name="filterLabNames" id="filterLabNames" onkeyup="sendMessage(this.value, 'labQuery')"/> 
       <BR>
-                 <select id="testList" type="combobox" size="11" class="test"name="selectedTest">
-               <option>HIT AB &lt;HEPARIN INDUCE HIT Antibody&gt;</option>
+            <select id="testList" type="combobox" size="11" class="test"name="selectedTest">
+               <!--option>HIT AB &lt;HEPARIN INDUCE HIT Antibody&gt;</option-->
             </select>
-      <BR>
-      <input type="text" name="filterProviders" onkeyup="sendMessage(this.value, 'providerQuery')"/>
-      <BR>
-      <div id="rule23">Urgency </div>
-      <select type="combobox" name="urgency" id="urgency" onfocus="sendMessage('noFilter', 'urgencyQuery')"> </select>  
-      <BR>                  
-      <input type="text" name="filterPatient" onkeyup="sendMessage(this.value, 'patientQuery')"/>
+            <select id="testListHidden" hidden type="combobox" size="11" class="test"name="selectedTestHidden">
+            </select>
+
+<!-- end new -->
+<!--
+            <input id="selectedTest" size="45" disabled></input>
+            <select id="testList" type="combobox" size="11" class="test"name="selectedTest">
+               <option>HIT AB &lt;HEPARIN INDUCE HIT Antibody&gt;</option>
+               <option>ALCOHOL METABOLITES</option>
+               <option>OXYCODONE AND METABOLITE</option>
+               <option>HIT Antibody &lt;HEPARIN INDUCED PLATELET&gt;</option>
+            </select>
+-->            
+         </DIV>
+         <DIV id="rule16">
+         </DIV>
+         <DIV id="rule17">
+            <span style="text-decoration: underline">General Ward Instructions:</span>
+            <br />
+            <DIV id="generalWardInstructions">
+            </DIV>
+            <!--
+            <SELECT style="color: red; width: 500px" type="combobox" size="24" name="generalWardInstructions" id="generalWardInstructions">
+            </SELECT>
+            -->
+         </DIV>
+         <DIV id="rule18"></DIV>
+         <DIV id="rule21">Collect Sample </DIV>
+         <DIV id="rule22">Specimen </DIV>
+         <DIV id="rule23">Urgency </DIV>
+         <DIV id="rule24">
+         
+            <SELECT type="combobox"name="collectionSample" id="collectionSample">
+            <!--
+               <OPTION label=" "></OPTION>
+               <OPTION id="LT BLUE" label="LT BLUE   ">LT BLUE</OPTION>
+               <OPTION id="RED" label="RED  ">RED</OPTION>
+               <OPTION id="GREEN" label="GREEN ">GREEN</OPTION>
+               <OPTION id="GREY" label="GREY ">GREY</OPTION>
+               <OPTION id="BLACK" label="BLACK ">BLACK</OPTION>
+             -->  
+            </SELECT>
+            
+         </DIV>
+
+         <DIV id="rule25">
+            <SELECT type="combobox" name="specimen" id="specimen">
+            <!--
+               <OPTION label=" "></OPTION>
+               <OPTION id="PLASMA" label="PLASMA">PLASMA</OPTION>
+               <OPTION id="URINE" label="URINE">URINE</OPTION>
+               <OPTION id="SAMPLE" label="SAMPLE">SAMPLE</OPTION>
+               <OPTION id="BLOOD" label="BLOOD">BLOOD</OPTION>
+             -->  
+            </SELECT>
+         </DIV>
+         <DIV id="rule26">
+
+<!-- new -->
+            <!--select type="combobox" name="urgency" id="urgency" onfocus="sendMessage('noFilter', 'urgencyQuery')"> </select--> 
+            <select type="combobox" name="urgency" id="urgency"> </select> 
+
+            <!--
+            <SELECT type="combobox"name="urgency">
+               <OPTION label=" "></OPTION>
+               <OPTION id="ROUTINE" label="ROUTINE">ROUTINE</OPTION>
+               <OPTION id="PRIORITY" label="PRIORITY">PRIORITY</OPTION>
+               <OPTION id="STAT" label="STAT">STAT</OPTION>
+            </SELECT>
+            -->
+         </DIV>
+         <DIV id="rule27"></DIV>
+         <DIV id="rule28">Enter order comment </DIV>
+         <DIV id="rule29">
+            <INPUT type="text" size="17"name="comment"id="comment">
+         </DIV>
+         <DIV id="rule32">Alert Provider(s) when resulted? </DIV>
+         <DIV id="rule33">Selected Providers: </DIV>
+         <DIV id="rule36">
+            <select id="selectProv" type= "combobox" size="7" class="test" name="providers"></select>
+            <select id="selectProvHidden" type= "combobox" size="7" class="test" name="selectProvHidden" multiple hidden></select>
+         </DIV>
+         <DIV id="rule37">
+            <select id="provList" type="combobox" size="8" class="test">
+            <!--
+               <option>Karls,Joseph V - CLINICAL APPLICATION COORD</option>
+               <option>Karnowski, Jennifer S - SURGICAL RESIDENT</option>
+               <option>Kashyap, Anita - PHARMACY RESIDENT</option>
+               <option>Kasprzak, Julia M - ATTENDING PHYSICIAN</option>
+               <option>Kastenmeier, Kayla M - SOCIAL WORKER</option>
+               <option>Kaufmann, Brent R - FELLOW</option>
+               <option>Keckeisen, Kathy A - HPDP MANAGER</option>
+             -->               
+            </select>
+         </DIV>
+        
+ <!--        
+            <select id="selectProv" type= "combobox" size="7" class="test" name="providers"></select>
+            <select id="selectProvHidden" type= "combobox" size="7" class="test" name="selectProvHidden" multiple hidden></select>
+         </DIV>
+         <DIV id="rule37">
+            <select id="provList" type="combobox" size="8" class="test">
+               <option>Karls,Joseph V - CLINICAL APPLICATION COORD</option>
+               <option>Karnowski, Jennifer S - SURGICAL RESIDENT</option>
+               <option>Kashyap, Anita - PHARMACY RESIDENT</option>
+               <option>Kasprzak, Julia M - ATTENDING PHYSICIAN</option>
+               <option>Kastenmeier, Kayla M - SOCIAL WORKER</option>
+               <option>Kaufmann, Brent R - FELLOW</option>
+               <option>Keckeisen, Kathy A - HPDP MANAGER</option>
+            </select>
+         </DIV>
+-->         
+         <DIV id="rule38">
+            <INPUT id="docName" type="text" size="45" onkeyup="sendMessage(this.value, 'providerQuery')">
+         </DIV>
+         <DIV id="rule40">
+            <INPUT type="text" size="7"name="howLong"id="howLong">
+         </DIV>
+         <DIV id="rule41">
+            <DIV id="rule42">
+               Order a Lab Test
+            </DIV>
+         </DIV>
+         <!-- <DIV id="rule34"><BUTTON class="btn34" style="width: 100px">Quit</BUTTON> </DIV> -->
+         <DIV id="rule34"><input type="button" style="width: 100px" value="Quit" id="quitButton"onClick="quit()"></input> </DIV>
+ <!--        <DIV id="rule35"><BUTTON class="btn35" style="width: 150px">Accept Order</BUTTON></ DIV>-->
+         <DIV id="rule35"><input type="button" style="width: 100px" value="Accept Order" id="submitButton"onClick="save()"></input> </DIV>
+         <DIV id="rule43"><LABEL>Electronic Signature Code</LABEL></DIV>
+         <DIV id="rule44"><input type="text" size="15"name="sigatureCode"></DIV>
+         <DIV id="rule45"><LABEL><span id="step1" class="breadCrumb">Select Test (Review General Ward Instructions)</span> > <span id="step2" class="breadCrumb">Set Provider Alert </span> > <span id="step3" class="breadCrumb">Sign the Order</span></LABEL></DIV>
+         </div><!--contentDiv-->
+      </FORM>
       <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
       <script type="text/javascript" src="//code.jquery.com/jquery-latest.js"></script>
 
@@ -32,5 +195,5 @@
       <script src="/ewdjs/EWD.js"></script>
       <!--script src="/ewdjs/ewdBoostrap_lprior.js"></script-->
       <script src="app.js"></script>
-    </body>
-</html>
+   </BODY>
+</HTML>
