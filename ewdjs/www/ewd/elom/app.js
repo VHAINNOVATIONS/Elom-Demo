@@ -1,7 +1,9 @@
-    
+        // Points to EWD server which will handle requests
         EWD.application = {
         name: 'elom'
         };
+
+        // Message sent to EWD server
         var sendMessage = function(fltr, type) {
           EWD.sockets.sendMessage({
           type: type,
@@ -11,7 +13,9 @@
           date: new Date().toUTCString()
           }
           });
-        }; 
+        };
+
+        // Message sent to EWD server
         var sendMessageWithID = function(idx, fltr, type) {
           EWD.sockets.sendMessage({
           type: type,
@@ -25,6 +29,8 @@
         };
         EWD.sockets.log = true;
 
+        // Display initial Log In page. This function is a place holder
+        // for the initialization of the Lab Order screen
         function logIn(){
           //initialize the page
           sendMessage("noFilter", "urgencyQuery") ;
@@ -41,8 +47,11 @@
           dv.style.display='block';         
           dv2.style.display='none';
         }
+
+        // leave Lab Order Managemnt system
         function quit(){location.href = "http://www.google.com";};
 
+        // save the curent Lab Order
         function save(){
           EWD.sockets.sendMessage({
             type: "saveLabOrder",
@@ -64,7 +73,10 @@
         });
       };
 
+        // Handle responses from requets sent to EWD
         EWD.onSocketMessage = function(messageObj) {
+
+          // General Ward Instructions Response. Populates and format each line.
           if (messageObj.type === 'gwiMatches'){
             var genWardInstr1 = "";
             for(var i=0; i < messageObj.message.length; i++ ){
@@ -78,6 +90,7 @@
             document.getElementById("generalWardInstructions").innerHTML = genWardInstr1;
           }
 
+          // Response for default data for selected Lab
           if (messageObj.type === 'labDefaultMatches'){
              for(var i=0; i < messageObj.message.length; i++ ) {
                 var text = messageObj.message[i].text;
@@ -92,13 +105,13 @@
              }
           }
 
+          // Response for provider search request, this is the list of providers
+          // returned for a given prefix
           if (messageObj.type === 'providerMatches'){
-            // Clear the Lab Name Selection box
             var cb = document.getElementById('provList');
             while(cb.options.length > 0){                
                cb.remove(0);
             }
-            // Fill the Lab Name Selection box
             
             for(var i=0; i < messageObj.message.length; i++ ){
               var option = document.createElement("option");
@@ -107,15 +120,15 @@
             }
           }
 
+          // Response for Lab search request, this is the list of labs 
+          // returned for a given prefix
           if (messageObj.type === 'labMatches'){
-            // Clear the Lab Name Selection box
             var cb = document.getElementById('testList');
             var cbh = document.getElementById('testListHidden');
             while(cb.options.length > 0){                
                cb.remove(0);
                cbh.remove(0);
             }
-            // Fill the Lab Name Selection box
             
             for(var i=0; i < messageObj.message.length; i++ ){
               var option = document.createElement("option");
@@ -129,6 +142,7 @@
 
           }
 
+          // Populate the Uregency combo box control
           if (messageObj.type === 'urgencyMatches'){
             var cb = document.getElementById('urgency');
             while(cb.options.length > 0){                
@@ -150,12 +164,14 @@
             }
           }
 
-
+          // Response from save Lab Order request 
           if (messageObj.type === 'labOrderSaved'){
             // log the event
-           console.log("Lab Order Saved " + new Date().toUTCString());
+            alert("Lab Order saved successfully!");
+            console.log("Lab Order Saved " + new Date().toUTCString());
           }
 
+          // Populate the Collect Samples combo box control
           if (messageObj.type === 'collectSampleMatches'){
             var cb = document.getElementById("collectionSample");
             while(cb.options.length > 0){                
@@ -175,6 +191,7 @@
             }
           }
 
+          // Populate the Specimen combo box control
           if (messageObj.type === 'specimenMatches'){
             var cb = document.getElementById("specimen");
             while(cb.options.length > 0){                
