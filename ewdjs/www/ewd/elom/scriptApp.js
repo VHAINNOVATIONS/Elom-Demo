@@ -33,6 +33,7 @@ function getSelectedLab(){
    sendMessage(cbLabTestHidden.value,"gwiQuery");
 };
 
+// Sets the Bread Crumb display
 function setCrumbs(step){
 	var step1 = document.getElementById("step1");
 	var step2 = document.getElementById("step2");
@@ -52,6 +53,9 @@ function setCrumbs(step){
 	}
 };
 
+// The onchange() handler for the available providers. Selecting a provider 
+// removes it from the available list and add to selected list and
+// the hidden provider list
 function prepareEventHandlersTwo(){
     var provList = document.getElementById("provList");
     var selectProv = document.getElementById("selectProv");
@@ -72,6 +76,9 @@ function prepareEventHandlersTwo(){
         }
 };
 
+// The onchange() event handler for the selected providers, 
+// The event hanlder removes the provider from the selecte list and the hidden list
+// Add the provider back to the avaialble provider list
 function prepareEventHandlersThree(){
     var provList = document.getElementById("selectProv");
     var selectProv = document.getElementById("provList");
@@ -88,6 +95,7 @@ function prepareEventHandlersThree(){
         }
 };
 
+// The window.onload event to initialize controls
 window.onload = function() {
     prepareEventHandlers();
     prepareEventHandlersTwo();
