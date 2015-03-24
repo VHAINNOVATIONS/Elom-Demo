@@ -73,8 +73,26 @@
         });
       };
 
+        // sort an object by the text element
+        function sortByText(messageObj){
+          messageObj.message.sort(function (a, b) {
+            if (a.text > b.text) {
+              return 1;
+            }
+            if (a.text < b.text) {
+              return -1;
+            }
+          // a equal to b
+            return 0;
+          });
+        }
+        
         // Handle responses from requets sent to EWD
         EWD.onSocketMessage = function(messageObj) {
+          //Sort the list
+          if (messageObj.type != 'gwiMatches' && messageObj.type != 'urgencyMatches' ){
+            sortByText(messageObj);
+          }
 
           // General Ward Instructions Response. Populates and format each line.
           if (messageObj.type === 'gwiMatches'){
